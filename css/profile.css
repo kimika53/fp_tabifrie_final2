@@ -1,0 +1,10 @@
+.info, .prefer, .plan {
+  display: flex;
+  gap: 24px;
+}
+
+.msg-sub {
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+}

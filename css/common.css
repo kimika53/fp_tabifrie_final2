@@ -1,0 +1,142 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  color: #666;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /*中央揃え*/
+  width: calc(100% - 32px); 
+  /*幅が狭まれたとき見やすいように両側にmarginをつけたい、ただしすでにautoにしたため、calcを利用して計算して設定、例：左右16pxずつ*/
+  box-sizing: border-box;
+}
+/*header*/
+header {
+  position: sticky;
+  top: 0px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 32px 0; 
+  background-color: #fff;
+  color: #A8DADC;
+}
+
+@media (min-width: 800px) {
+header {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 32px 0; 
+  background-color: #fff;
+  color: #A8DADC;
+}
+}
+h1 {
+  margin: 0;
+  font-size: 0; /*画像より小さくすれば（上の）余白は完全に消える*/
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.banner{
+  visibility: hidden;
+}
+
+@media (min-width: 1000px) {
+  .banner {
+    visibility: visible;
+  }
+}
+
+
+
+nav {
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+nav > ul {
+  list-style: none; /*先頭の黒丸を消し*/
+  padding: 0; 
+  margin: 0;
+  /*padding と margin もついているので 0 にして*/
+  display: flex; /*フレックスコンテナとして設定すれば中の要素が横並びになる*/
+}
+
+li > a {
+  display: block; 
+  /*領域を広げてクリックしやすくしたい、a 要素はデフォルトでインラインボックスなので、幅と高さが指摘できない。そこで display プロパティを使って、ブロックかインラインブロックにすればよい*/
+  width: 132px;
+  line-height: 64px; /* 上下中央、行ボックスの高さをロゴ画像の高さに合わせることで、テキストを上下中央揃えになって、バランスがきれい。*/
+  text-align: center; /* 左右中央 */
+  text-decoration: none;
+  color: #666;
+  /* font-size: 14px; */
+}
+
+li > a:hover {
+  font-weight: 500;
+  color: #72dbdf;
+  transform: scale(1.05);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+}
+.btn {
+  background-color: #eee;
+  color: #666;
+  border-color: #b3b3b3;
+  border-radius: 10px;
+  min-width: 100px;
+  padding: 8px 20px;
+  font-size: 14px;
+  text-decoration: none; /*リンクの下線を消す*/
+  display: inline-block; 
+  /* a 要素はインラインボックスなので、上下に padding をつけても上と少し被っていたり、背景色からはみだしたりして、padding の分だけ要素の高さを出したいなら、この要素の display プロパティをブロックかインラインブロックにする必要がある。ボタンが増えたら次のボタンは右側にきてほしいのでinline-block*/
+}
+.btn:hover {
+  color: #777;
+  font-weight: 600;
+  transform: scale(1.05);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+}
+.btn_s {
+  background-color: #72dbdf;
+  color: #eee;
+  border-color: #b3b3b3;
+  border-radius: 8px;
+  min-width: 100px;
+  padding: 8px 20px;
+  margin-right: 12px; /*要確認*/
+  font-size: 14px;
+  text-decoration: none; 
+  display: inline-block; 
+}
+.btn_s:hover {
+  font-weight: 600;
+  transform: scale(1.05);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+}
+
+
+h2 {
+  /* margin: 0; */
+  font-weight: normal;
+  /* text-align: center; */
+}
+
+h3 {
+  /* margin: 0; */
+  font-weight: normal;
+}
+p {
+  /* margin: 0; */
+  font-size: 14px;
+}
+
+

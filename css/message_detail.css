@@ -1,0 +1,114 @@
+
+.tabifrie_name {
+  padding-left: 8px;
+  margin: 12px;
+}
+
+/* タイムライン */
+.messages {
+  overflow: auto;/* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
+  min-height:40vh;/*テキストエリアが下に張り付く様にする*/
+  /* border: 2px solid #eee; */
+  /* border-left: 1px solid #ddd; */
+  background-color: #f8f7f7;
+  border-radius: 4px;
+  box-shadow: 2px #aaa inset;
+  /*ヘッダーの下に影を入れる*/
+  margin: 24px;
+  padding: 12px;
+}
+  /* メッセージ全般のスタイル */
+  .message {
+      margin: 0px;
+      padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
+      font-size: 14px;
+      word-wrap: break-word;/* 吹き出し内で自動で改行 */
+      white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+  }
+
+  .message_box{
+    margin-top: 20px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
+    max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
+    /* font-size: 16px; */
+}
+
+.message_content{
+  padding: 8px 10px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
+}
+
+  /* メッセージ１（左側） */
+  .msg_left {
+      float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+      line-height: 1.3em;
+      text-align: end;
+  }
+
+  .msg_left .message_box {
+    /* color: #333; */
+    /*テキストを黒にする*/
+    background: #f1f1f1;
+    /* border: 2px solid #A8DADC; */
+    border-radius: 30px 30px 30px 0px;/*左下だけ尖らせて吹き出し感を出す*/
+    margin-right: 50px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
+}
+  /* メッセージ２（右側） */
+  .msg_right {
+      float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+      line-height: 1.3em;
+  }
+
+  .msg_right .message_box {
+    color: #555;
+    /*テキストを白にする*/
+    background: #A8DADC;
+    /* border: 2px solid #72dbdf; */
+    border-radius: 30px 30px 0px 30px;/*右下だけ尖らせて吹き出し感を出す*/
+    margin-left: 50px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
+}
+
+  /* 回り込みを解除 */
+  .clear {
+      clear: both; /* 左メッセージと右メッセージの回り込み(float)の効果の干渉を防ぐために必要（これが無いと、自分より下のメッセージにfloatが影響する） */
+
+  }
+
+/* テキストエリア、送信ボタン */
+.message {
+  padding: 4px;
+}
+
+form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.send_message {
+    width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+    min-width: 400px;
+    line-height: 16px;
+    height: auto;
+    margin: 0 12px;
+    padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
+    border: 1px solid #ccc;
+    border-radius: 4px;/*角丸*/
+    text-align: left;/*文字を左寄せ*/
+    box-shadow: 1px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
+    box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+
+}
+
+.send_message:focus {
+  outline: none;
+  border: 2px solid #9e9e9e
+}
+
+.offer_choice {
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px;
+  gap: 12px;
+}
+
+.my-msg {
+  padding-right: 8px;
+}

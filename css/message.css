@@ -1,0 +1,19 @@
+.table {
+  display: flex;
+  justify-content: center;
+}
+
+th, td {
+  min-width: 200px;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  font-weight: 600;
+}
+
+.hidden {
+  display: flex;
+  justify-content: center;
+} 
