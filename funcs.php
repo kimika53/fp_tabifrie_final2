@@ -13,7 +13,7 @@ function db_conn()
         $db_name = "gs-dev27-34_fp_tabifrie";  
         $db_host = "mysql3101.db.sakura.ne.jp"; 
         $db_id = "gs-dev27-34_fp_tabifrie"; 
-        $db_pw = "sakura1234"; 
+        $db_pw = "sakura****"; 
         $pdo = new PDO('mysql:dbname='.$db_name.';charset=utf8;host='. $db_host, $db_id, $db_pw);
         return $pdo;
     } catch (PDOException $e) {
